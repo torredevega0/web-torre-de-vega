@@ -1,0 +1,448 @@
+/*
+ * Torre de Vega — páginas interiores (Sobre nosotros, Reseñas, Contacto, legales) y
+ * ajustes de la carta.
+ *
+ * Reutiliza los componentes de la portada (hero, llamas, historia, contacto, pie) y
+ * añade solo lo que la portada no necesitaba. Todos los valores (tipografías, cristal,
+ * dorado #ccad60, carbón #080808) salen de la web de referencia.
+ * Cargar después de tdv-core.css y, cuando exista, tdv-home.css.
+ */
+
+/* ---- Utilidades ------------------------------------------------------------------ */
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Keyboard focus must never land inside a row that is still clipped. */
+.editorial-motion [data-reveal-row]:focus-within {
+  clip-path: none !important;
+}
+
+/* ---- Hero interior ---------------------------------------------------------------- */
+/* Misma portada que la home, a pantalla completa y sin la apertura fijada al scroll.
+   La fotografía la declara cada página en su HTML (imágenes adaptativas). */
+
+.page-hero.hero {
+  height: 100svh;
+  min-height: 540px;
+}
+
+/* ---- Sección clara genérica (tratamiento de "Una historia de familia") ----------- */
+
+.editorial.editorial-light {
+  background: #fff;
+  background-image: none;
+  color: #1a1a1a;
+  border-top: 1px solid #1a1a1a18 !important;
+}
+.ember-divider + .editorial.editorial-light {
+  border-top: 0 !important;
+}
+/* tdv-core.css paints every text element inside .editorial white; restore ink here. */
+.editorial.editorial-light :is(h2, h3, p, em, li, label, legend, span) {
+  color: #1a1a1a;
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid;
+  font: 700 13px Raleway, sans-serif;
+  letter-spacing: 0.02em;
+  transition: border-color 0.25s, color 0.25s;
+}
+.editorial-light .text-link {
+  color: #1a1a1a;
+}
+.editorial-light .text-link:hover {
+  border-color: var(--accent);
+}
+
+/* ---- Sobre nosotros: tarjetas fotográficas con cristal ----------------------------- */
+
+.experience-grid.experience-grid--pairs {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 56px 40px;
+  max-width: 1120px;
+  margin-inline: auto;
+}
+/* Square photographs keep the reference zoom (auto 145% -> 120%) without side gaps. */
+.experience-grid--pairs .depth-card .card-art {
+  aspect-ratio: 1.1;
+  background-position: center;
+}
+@media (max-width: 600px) {
+  .experience-grid.experience-grid--pairs {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+/* ---- Reseñas ------------------------------------------------------------------------ */
+
+.editorial.reviews-wall {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(70px, 9vw, 130px) 8% clamp(120px, 15vw, 200px);
+  background: #080808;
+  background-image: none;
+}
+.reviews-wall::before {
+  content: 'RESEÑAS';
+  position: absolute;
+  top: 5%;
+  right: -4%;
+  font: 800 clamp(70px, 13vw, 210px) / 0.8 Montserrat, sans-serif;
+  letter-spacing: -0.09em;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff12;
+  pointer-events: none;
+}
+.rating {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px 30px;
+  margin: 0 0 clamp(50px, 6vw, 90px);
+  padding-bottom: 26px;
+  border-bottom: 1px solid #ffffff30;
+}
+.editorial .rating-score {
+  margin: 0;
+  font: 800 clamp(64px, 9vw, 140px) / 0.82 Montserrat, sans-serif;
+  letter-spacing: -0.07em;
+  color: #fff;
+}
+.editorial .rating-score small {
+  font-size: 0.38em;
+  letter-spacing: -0.04em;
+  color: #ffffffb3;
+}
+.editorial .rating-stars {
+  margin: 0 0 0.3em;
+  font-size: clamp(22px, 2.4vw, 34px);
+  line-height: 1;
+  letter-spacing: 0.14em;
+  color: #ccad60;
+}
+.editorial .rating-label {
+  flex-basis: 100%;
+  margin: 0;
+  font: 700 12px Raleway, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ccad60;
+}
+.review-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  column-gap: 7%;
+  row-gap: 28px;
+}
+/* Staggered columns, as the two testimonials of the home page. */
+.review-list blockquote:nth-child(even) {
+  translate: 0 clamp(40px, 7vw, 110px);
+}
+/* Same treatment as .restaurant-contact blockquote (tdv-home.css). */
+.review-list blockquote {
+  margin: 0;
+  padding: 28px 30px 30px;
+  border: 1px solid #ffffff2b;
+  border-left: 2px solid #ccad60;
+  background: linear-gradient(135deg, #ffffff0e, #ffffff03);
+  color: #fff;
+  font: 400 clamp(16px, 1.4vw, 20px) / 1.55 'Open Sans', sans-serif;
+  transition: transform 0.35s ease, background 0.35s ease;
+}
+.review-list blockquote::first-letter {
+  color: #ccad60;
+  font: 700 44px Georgia, serif;
+}
+.review-list blockquote:hover {
+  transform: translateY(-7px);
+  background: #ccad6010;
+}
+.review-list cite {
+  display: block;
+  margin-top: 20px;
+  color: #ccad60;
+  font: 700 12px Raleway, sans-serif;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+@media (max-width: 760px) {
+  .editorial.reviews-wall {
+    padding: 60px 6% 70px;
+  }
+  .reviews-wall::before {
+    top: 2%;
+    right: -8%;
+    font-size: 74px;
+  }
+  .review-list {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+  .review-list blockquote:nth-child(even) {
+    translate: none;
+  }
+  .review-list blockquote {
+    padding: 22px 20px;
+  }
+}
+
+/* ---- Cierre de reserva estático (estado final del portal circular de la home) ------- */
+
+.booking.booking--static {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100svh;
+  padding: 14vh 7% 20vh;
+  background: #080808;
+  color: #fff;
+  isolation: isolate;
+}
+.booking--static::before {
+  content: 'TORRE DE VEGA';
+  position: absolute;
+  inset: auto -8% 8%;
+  z-index: -1;
+  font: 800 clamp(90px, 18vw, 280px) / 0.8 Montserrat, sans-serif;
+  letter-spacing: -0.09em;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff14;
+  white-space: nowrap;
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+.booking--static .booking-content {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  text-align: left;
+}
+.booking--static .booking-content h2 {
+  max-width: 920px;
+  margin: 0 0 38px;
+  font: 800 clamp(42px, 7vw, 108px) / 0.94 Montserrat, sans-serif;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.booking--static .booking-content h2 br {
+  display: block;
+}
+.booking--static .booking-content .button {
+  position: absolute;
+  top: calc(100% + 18px);
+  right: clamp(0px, 3vw, 54px);
+  min-width: 190px;
+  justify-content: space-between;
+  padding: 15px 22px;
+  border: 1px solid #ffffff42;
+  border-radius: 5px 0 0 5px;
+  background: linear-gradient(130deg, #ffffff1d, #ffffff08);
+  color: #fff;
+  font: 700 14px Raleway, sans-serif;
+  backdrop-filter: blur(12px) saturate(135%);
+  -webkit-backdrop-filter: blur(12px) saturate(135%);
+  box-shadow: inset 0 1px 0 #ffffff38, inset 0 -1px 0 #ffffff14, 0 12px 28px #0003;
+}
+.booking--static .booking-content .button:hover {
+  background: linear-gradient(130deg, #ffffff2b, #ffffff12);
+  color: #fff;
+}
+@media (max-width: 760px) {
+  .booking.booking--static {
+    min-height: 85svh;
+    padding: 12vh 6% 22vh;
+  }
+  .booking--static .booking-content h2 {
+    margin-bottom: 26px;
+    font-size: clamp(35px, 10vw, 58px);
+  }
+  .booking--static .booking-content .button {
+    top: calc(100% + 12px);
+    right: 0;
+    min-width: 150px;
+  }
+}
+
+/* ---- Contacto: formulario sin servidor ---------------------------------------------- */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  align-items: start;
+  gap: 8%;
+}
+.contact-form {
+  display: grid;
+  gap: 24px;
+}
+.contact-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.editorial .contact-form label {
+  display: grid;
+  gap: 8px;
+  font: 700 12px Raleway, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.editorial-light .contact-form .optional {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: #7a7a7a;
+}
+.contact-form :is(input[type='text'], input[type='email'], textarea) {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid #1a1a1a55;
+  border-radius: 0;
+  background: transparent;
+  color: #1a1a1a;
+  font: 400 16px/1.6 'Open Sans', sans-serif;
+  text-transform: none;
+  letter-spacing: 0;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.contact-form :is(input[type='text'], input[type='email'], textarea):focus-visible {
+  outline: none;
+  border-bottom-color: var(--accent);
+  box-shadow: 0 1px 0 var(--accent);
+}
+.editorial .contact-form label.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font: 400 14px/1.6 'Open Sans', sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.contact-form .consent input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 3px 0 0;
+  padding: 0;
+  accent-color: #1a1a1a;
+}
+.contact-form .consent a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+.form-actions .button {
+  min-width: 190px;
+}
+.button.outline {
+  background: transparent;
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+}
+.editorial .form-status {
+  min-height: 1.5em;
+  margin: 0;
+  font-size: 14px;
+}
+.contact-direct {
+  display: grid;
+  gap: 30px;
+  margin: 0;
+  padding-top: 4px;
+}
+.contact-direct dt {
+  font: 700 12px Raleway, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7a7a7a;
+}
+.contact-direct dd {
+  margin: 8px 0 0;
+  font: 700 clamp(20px, 2vw, 28px) / 1.3 Montserrat, sans-serif;
+  letter-spacing: -0.03em;
+  color: #1a1a1a;
+}
+.contact-direct a {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s;
+}
+.contact-direct a:hover {
+  border-color: var(--accent);
+}
+@media (max-width: 760px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+  .contact-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Legales y autor -------------------------------------------------------------- */
+
+.legal-page .legal-back {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.legal-page h2 {
+  margin: 2.2em 0 0.8em;
+  font: 700 clamp(14px, 1.25vw, 18px) / 1.5 'Open Sans', sans-serif;
+  letter-spacing: 0;
+  color: #fff;
+}
+.legal-page :is(ul, ol) {
+  padding-left: 1.2em;
+}
+.legal-page li {
+  margin: 0.4em 0;
+  font-size: clamp(14px, 1.25vw, 18px);
+  line-height: 1.8;
+}
+.legal-page :is(p, li) a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal-body .brand-footer {
+  border-top: 1px solid #ffffff1a !important;
+}
+
+/* ---- Carta ---------------------------------------------------------------------------- */
+
+.menu-page .brand-footer {
+  background: #080808;
+}

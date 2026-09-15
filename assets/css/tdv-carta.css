@@ -1,0 +1,565 @@
+/*
+ * Torre de Vega — carta editorial (/carta-torre-de-vega/).
+ * Se carga después de tdv-core.css. La estructura de capítulos y "spreads" la
+ * genera assets/js/tdv-carta.js a partir de la lista de platos del HTML.
+ */
+
+body.designed-menu {
+  --paper: #e9ecef;
+  --coal: #080808;
+  --gold: #ccad60;
+  margin: 0;
+  background: var(--paper);
+  color: #1a1a1a;
+  font:
+    400 15px/1.55 "Open Sans",
+    sans-serif;
+}
+.designed-menu * {
+  box-sizing: border-box;
+}
+.designed-menu .menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  height: 58px;
+  margin: 0;
+  padding: 0 5vw;
+  background: var(--coal);
+  color: #fff;
+  border: 0;
+  font:
+    700 11px Raleway,
+    sans-serif;
+  letter-spacing: 0.04em;
+}
+.designed-menu .menu-header > a:first-child {
+  display: none;
+}
+.designed-menu .menu-header a {
+  color: #fff;
+  text-decoration: none;
+}
+.designed-menu .menu-header a:hover {
+  color: var(--gold);
+}
+.designed-menu .sample-menu {
+  max-width: none;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0;
+  background: var(--paper);
+  color: #1a1a1a;
+  clip-path: none !important;
+  transform: none !important;
+  overflow: visible;
+}
+.designed-menu .section-heading {
+  display: block;
+  margin: 0;
+  padding: 32px 5vw 24px;
+}
+.designed-menu .section-heading h1 {
+  margin: 0;
+  font:
+    700 clamp(46px, 6vw, 84px)/0.94 "League Spartan",
+    sans-serif;
+  letter-spacing: -0.06em;
+  color: #1a1a1a;
+}
+.menu-tools {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 13px 5vw;
+  background: #e9eceff2;
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid #1a1a1a20;
+}
+.designed-menu .menu-filters {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  gap: 22px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #ccad6070 transparent;
+  margin: 0;
+  padding: 8px 0;
+  border: 0;
+  flex-wrap: nowrap;
+}
+.designed-menu .menu-filters button {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 6px 0;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  color: #1a1a1a;
+  font:
+    700 11px/1.4 Raleway,
+    sans-serif;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.designed-menu .menu-filters button[aria-pressed="true"] {
+  border-bottom-color: var(--gold);
+  color: #1a1a1a;
+}
+.menu-search-label {
+  flex: 0 0 195px;
+}
+.designed-menu .menu-search {
+  width: 100%;
+  margin: 0;
+  padding: 10px 12px;
+  background: #ffffff80;
+  border: 1px solid #1a1a1a25;
+  border-radius: 3px;
+  color: #1a1a1a;
+  font:
+    400 12px "Open Sans",
+    sans-serif;
+}
+.designed-menu .menu-status {
+  margin: 0;
+  padding: 12px 5vw;
+  font:
+    400 11px "Open Sans",
+    sans-serif;
+  color: #555;
+}
+.designed-menu .menu-status.is-empty {
+  padding: 60px 5vw;
+  font-size: 18px;
+  min-height: 50vh;
+}
+.menu-chapter {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 54px 5vw 60px;
+  background: var(--paper);
+  color: #1a1a1a;
+  border-top: 1px solid #1a1a1a1c;
+}
+.menu-chapter.chapter-dark {
+  background: var(--coal);
+  color: #fff;
+  border-color: #ffffff20;
+}
+.menu-chapter > h2 {
+  max-width: 1100px;
+  margin: 0 auto 32px;
+  font:
+    700 clamp(42px, 5.3vw, 74px)/1 "League Spartan",
+    sans-serif;
+  letter-spacing: -0.045em;
+  color: inherit;
+  text-wrap: balance;
+}
+.chapter-dishes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 6%;
+  max-width: 1100px;
+  margin: auto;
+}
+.designed-menu .menu-dish {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+  min-height: 145px;
+  margin: 0;
+  padding: 25px 0;
+  border: 0;
+  border-bottom: 1px solid #1a1a1a24;
+  background: none;
+  border-radius: 0;
+  color: inherit;
+  transform: none;
+  opacity: 1;
+}
+.designed-menu .chapter-dark .menu-dish {
+  border-color: #ffffff22;
+}
+.designed-menu .menu-dish > div:not(.dish-visual) {
+  flex: 1;
+  min-width: 0;
+}
+.designed-menu .menu-dish h3 {
+  margin: 0;
+  color: inherit;
+  font:
+    700 clamp(17px, 1.65vw, 22px)/1.25 Montserrat,
+    sans-serif;
+  letter-spacing: -0.035em;
+  text-transform: none;
+  text-wrap: pretty;
+}
+.designed-menu .dish-price {
+  display: block;
+  margin-top: 13px;
+  color: inherit;
+  font:
+    700 14px/1.5 Raleway,
+    sans-serif;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.designed-menu .chapter-dark .dish-price {
+  color: #ccad60;
+}
+.designed-menu .dish-illustrated {
+  min-height: 205px;
+}
+.designed-menu .dish-visual {
+  position: relative;
+  flex: 0 0 45%;
+  align-self: center;
+  isolation: isolate;
+}
+.designed-menu .dish-visual:before {
+  content: "";
+  position: absolute;
+  inset: 15% 3%;
+  border: 1px solid #ccad6050;
+  border-radius: 48% 52% 57% 43%;
+  transform: rotate(-24deg);
+  z-index: -1;
+}
+.designed-menu .dish-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 14px #0002);
+  transition: transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+  border-radius: 0;
+}
+.designed-menu .menu-dish:nth-child(even) .dish-visual {
+  order: 2;
+}
+.designed-menu .menu-dish:nth-child(even) .dish-visual:before {
+  transform: rotate(25deg);
+}
+.designed-menu .menu-dish:hover .dish-visual img {
+  transform: translateY(-5px) rotate(-2deg);
+}
+.chapter-note {
+  max-width: 1100px;
+  margin: 25px auto 0;
+  font:
+    400 12px/1.7 "Open Sans",
+    sans-serif;
+  color: inherit;
+  opacity: 0.8;
+}
+.designed-menu [hidden] {
+  display: none !important;
+}
+.designed-menu :is(a, button, input):focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+@media (min-width: 1400px) {
+  .menu-chapter {
+    padding-top: 65px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 760px) {
+  .designed-menu .menu-header {
+    padding: 0 5%;
+    height: 48px;
+    gap: 12px;
+    font-size: 10px;
+  }
+  .designed-menu .section-heading {
+    padding: 28px 5% 20px;
+  }
+  .menu-tools {
+    padding: 8px 5% 12px;
+    gap: 6px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .menu-search-label {
+    flex: auto;
+    order: -1;
+  }
+  .designed-menu .menu-search {
+    padding: 9px 12px;
+  }
+  .designed-menu .menu-filters {
+    gap: 20px;
+    padding: 4px 0;
+  }
+  .menu-chapter {
+    padding: 34px 5% 40px;
+  }
+  .menu-chapter > h2 {
+    margin-bottom: 14px;
+    font-size: 43px;
+  }
+  .chapter-dishes {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .designed-menu .menu-dish {
+    min-height: 90px;
+    padding: 20px 0;
+    gap: 18px;
+  }
+  .designed-menu .dish-illustrated {
+    min-height: 160px;
+    padding: 12px 0;
+  }
+  .designed-menu .dish-visual {
+    flex-basis: 42%;
+    max-width: 190px;
+  }
+  .designed-menu .menu-dish h3 {
+    font-size: 18px;
+  }
+  .designed-menu .dish-price {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .designed-menu .dish-visual img {
+    transition: none;
+  }
+  .designed-menu .menu-dish:hover .dish-visual img {
+    transform: none;
+  }
+}
+
+/* Composed paper spreads: large cutouts paired with smaller, precisely labelled dishes. */
+.designed-menu {
+  --paper: #e9ecef;
+}
+.menu-chapter:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23888' filter='url(%23n)' opacity='.35' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+}
+.menu-chapter > h2 {
+  font-size: clamp(48px, 7vw, 92px);
+  margin-bottom: 35px;
+}
+.chapter-dishes {
+  display: block;
+}
+.menu-spread {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 7%;
+  align-items: center;
+  padding: 24px 0 38px;
+}
+.menu-spread + .menu-spread {
+  border-top: 1px solid #1a1a1a20;
+  padding-top: 42px;
+}
+.chapter-dark .menu-spread + .menu-spread {
+  border-color: #ffffff20;
+}
+.designed-menu .spread-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 0;
+  padding: 0;
+  align-self: center;
+  min-height: 0;
+  text-align: center;
+}
+.designed-menu .spread-feature .dish-visual {
+  order: 0;
+  flex: auto;
+  width: 100%;
+  max-width: 390px;
+  transform: rotate(-5deg);
+}
+.designed-menu .spread-feature .dish-visual:before {
+  display: none;
+}
+.designed-menu .spread-feature h3 {
+  font:
+    700 clamp(23px, 2.8vw, 36px)/1.05 "League Spartan",
+    sans-serif;
+  letter-spacing: -0.035em;
+  max-width: 390px;
+}
+.designed-menu .spread-feature .dish-price {
+  font-size: 18px;
+}
+.spread-companions {
+  min-width: 0;
+}
+.designed-menu .spread-companions .menu-dish {
+  min-height: 85px;
+  padding: 18px 0;
+  gap: 20px;
+}
+.designed-menu .spread-companions .dish-visual {
+  flex: 0 0 105px;
+  order: 2;
+  max-width: 105px;
+}
+.designed-menu .spread-companions .dish-visual:before {
+  display: none;
+}
+.designed-menu .spread-companions .menu-dish h3 {
+  font-size: 16px;
+  line-height: 1.4;
+}
+.menu-spread[data-side="right"] > .spread-feature {
+  grid-column: 2;
+  grid-row: 1;
+}
+.menu-spread[data-side="right"] > .spread-companions {
+  grid-column: 1;
+  grid-row: 1;
+}
+.menu-spread[data-side="right"] .spread-feature .dish-visual {
+  transform: rotate(5deg);
+}
+.spread-text-only,
+.feature-hidden {
+  display: block;
+}
+.spread-text-only .spread-companions,
+.feature-hidden .spread-companions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 7%;
+}
+.menu-spread:last-child .spread-feature:only-child {
+  grid-column: 1/-1;
+  max-width: 500px;
+  justify-self: center;
+}
+.menu-spread:has(.spread-companions[hidden]) > .spread-feature {
+  grid-column: 1/-1;
+  max-width: 500px;
+  justify-self: center;
+}
+@media (min-width: 761px) {
+  .menu-chapter:not(.chapter-dark) .menu-spread[data-side="right"] .spread-companions {
+    background: #080808;
+    color: #fff;
+    padding: 18px 26px;
+    border-radius: 4px 24px 4px 4px;
+  }
+  .menu-chapter:not(.chapter-dark) .menu-spread[data-side="right"] .spread-companions .menu-dish {
+    border-color: #ffffff25;
+  }
+  .menu-chapter:not(.chapter-dark) .menu-spread[data-side="right"] .spread-companions .dish-price {
+    color: #ccad60;
+  }
+}
+@media (max-width: 760px) {
+  .menu-chapter > h2 {
+    font-size: 48px;
+    margin-bottom: 22px;
+  }
+  .menu-spread {
+    gap: 14px;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    padding: 12px 0 24px;
+  }
+  .designed-menu .spread-feature h3 {
+    font-size: 22px;
+  }
+  .designed-menu .spread-feature .dish-price {
+    font-size: 15px;
+  }
+  .designed-menu .spread-companions .menu-dish {
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 13px 0;
+  }
+  .designed-menu .spread-companions .menu-dish h3 {
+    font-size: 14px;
+  }
+  .designed-menu .spread-companions .dish-visual {
+    display: none;
+  }
+  .designed-menu .feature-hidden .spread-companions .dish-visual {
+    display: block;
+    flex: 0 0 85px;
+  }
+  .designed-menu .spread-companions .dish-price {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+  .spread-text-only .spread-companions,
+  .feature-hidden .spread-companions {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+@media (max-width: 380px) {
+  .menu-spread {
+    grid-template-columns: 1fr;
+  }
+  .menu-spread[data-side="right"] > .spread-feature,
+  .menu-spread[data-side="right"] > .spread-companions {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .designed-menu .spread-feature .dish-visual {
+    max-width: 230px;
+  }
+}
+
+/* Classic prices: dark ink on paper, soft white on charcoal. */
+body.designed-menu .menu-chapter .menu-spread .menu-dish .dish-price {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.35;
+  letter-spacing: 0.025em;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  color: #1a1a1a;
+  text-shadow: none;
+}
+body.designed-menu .menu-chapter .menu-spread .spread-feature .dish-price {
+  font-size: 21px;
+}
+body.designed-menu .chapter-dark .menu-spread .menu-dish .dish-price {
+  color: rgba(255, 255, 255, 0.82);
+}
+@media (min-width: 761px) {
+  body.designed-menu .menu-chapter .menu-spread[data-side="right"] .spread-companions .dish-price {
+    color: rgba(255, 255, 255, 0.82);
+  }
+}
+@media (max-width: 760px) {
+  body.designed-menu .menu-chapter .menu-spread .menu-dish .dish-price {
+    font-size: 16px;
+  }
+  body.designed-menu .menu-chapter .menu-spread .spread-feature .dish-price {
+    font-size: 19px;
+  }
+}

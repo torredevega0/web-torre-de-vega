@@ -1,0 +1,17 @@
+/*
+ * Torre de Vega — imágenes adaptativas (assets/js/tdv-images.js).
+ *
+ * Con JavaScript, cada fondo fotográfico (.tdv-bg) muestra la versión que decide el
+ * script, empezando por la miniatura incrustada en --tdv-img. Sin JavaScript se usa la
+ * foto completa del atributo style o de <noscript>. La clase .tdv-js la pone un script
+ * de una línea en el <head>, antes de pintar nada.
+ * Cargar la última.
+ */
+
+.tdv-js .tdv-bg {
+  background-image: var(--tdv-img) !important;
+}
+
+html:not(.tdv-js) img.tdv-img {
+  display: none;
+}

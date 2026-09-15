@@ -1,0 +1,686 @@
+/*
+ * Torre de Vega — acabados de portada y bloques de cierre reutilizables.
+ * Cristal del hero, carrusel de frases, divisor de llamas, reserva y contacto.
+ * Se carga después de tdv-core.css en la portada y en las páginas interiores.
+ */
+
+/* Home only: centered cover, alternating copy and live ember boundary. */
+/* Continuous charcoal finish from the circular transition to the footer. */
+.opening.opening-portal .about,
+.ritual.portal-ready,
+.portal-ready.portal-motion .ritual-pin,
+.portal-ready .iris,
+.portal-ready.portal-motion .booking,
+.editorial.restaurant-contact,
+.brand-footer {
+  background: #080808;
+  background-image: none;
+}
+.editorial.kitchen {
+  border-top: 1px solid #1a1a1a18 !important;
+}
+.hero-details {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  gap: 18px;
+  text-align: left;
+}
+.hero-details p {
+  font-size: clamp(13px, 1.05vw, 16px);
+  line-height: 1.65;
+  margin: 0;
+  color: #fff;
+  flex: 0 1 auto;
+  min-width: 0;
+  text-wrap: pretty;
+  padding: 18px 22px;
+}
+.hero-details p,
+.hero .hero-details .button {
+  position: relative;
+  isolation: isolate;
+}
+.hero-details p {
+  order: 2;
+  align-self: flex-start;
+}
+.hero .hero-details .button {
+  order: 1;
+  align-self: flex-end;
+}
+.hero-details p::before,
+.hero .hero-details .button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 6px;
+  background: linear-gradient(125deg, #ffffff1f, #ccad6012 48%, #ffffff08);
+  backdrop-filter: blur(14px) saturate(135%);
+  -webkit-backdrop-filter: blur(14px) saturate(135%);
+  box-shadow:
+    inset 0 1px 0 #ffffff35,
+    inset 0 -1px 0 #ccad6015,
+    0 12px 28px #0002;
+  animation: hero-glass-left 1.35s 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-details p::before {
+  left: -8vw;
+  border-radius: 0 6px 6px 0;
+}
+.hero .hero-details .button::before {
+  right: -8vw;
+  border-radius: 6px 0 0 6px;
+  animation-name: hero-glass-right;
+  animation-delay: 0.6s;
+}
+.hero .hero-details .button,
+.hero .hero-details .button:hover {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.hero .hero-details .button:hover::before {
+  background: linear-gradient(125deg, #ffffff2b, #ccad6023 48%, #ffffff10);
+}
+@keyframes hero-glass-left {
+  from {
+    opacity: 0;
+    transform: translateX(-70vw) skewX(-8deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) skewX(0);
+  }
+}
+@keyframes hero-glass-right {
+  from {
+    opacity: 0;
+    transform: translateX(70vw) skewX(8deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) skewX(0);
+  }
+}
+.fire-toggle {
+  position: absolute;
+  right: 18px;
+  bottom: 8px;
+  z-index: 2;
+  border: 0;
+  background: #fff;
+  color: #1a1a1a;
+  padding: 8px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.hero .hero-details .button {
+  border: 0;
+  box-shadow: none;
+  min-width: 160px;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+body:not(.menu-page) .hero header {
+  position: absolute;
+  top: 0;
+  left: 4.4%;
+  right: 4.4%;
+  z-index: 2;
+}
+.hero .hero-grid {
+  height: 100%;
+  min-height: 0;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 34px;
+}
+.hero .hero-grid h1 {
+  font-family: Montserrat, "League Spartan", sans-serif;
+  font-weight: 800;
+  font-size: clamp(48px, 8.7vw, 148px);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.hero .hero-grid h1 span {
+  white-space: nowrap;
+}
+.hero .hero-grid h1 span + span {
+  margin-top: 0.12em;
+}
+.hero .hero-grid > .button {
+  flex: none;
+  min-width: 180px;
+  justify-content: center;
+}
+.hero .shade {
+  background: linear-gradient(180deg, #0009, #0006 45%, #0009);
+}
+.opening.opening-portal .about-copy {
+  overflow: visible;
+}
+.opening.opening-portal .about-copy h2 {
+  font-weight: 800;
+  line-height: 1.05;
+  margin: 0;
+  font-size: clamp(36px, 5vw, 78px);
+}
+.phrase-carousel {
+  position: relative;
+  height: clamp(180px, 20vw, 310px);
+  overflow: hidden;
+  perspective: 900px;
+  isolation: isolate;
+}
+.phrase-carousel .about-line {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  white-space: normal;
+  will-change: transform, opacity;
+  animation: phrase-loop 9s cubic-bezier(0.22, 0.8, 0.24, 1) infinite;
+}
+.phrase-carousel .about-line:nth-child(2) {
+  animation-name: phrase-loop-reverse;
+  animation-delay: 3s;
+}
+.phrase-carousel .about-line:nth-child(3) {
+  animation-delay: 6s;
+}
+.phrase-carousel::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 8%;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, #ccad60 0 28%, #ffffff20 28%);
+  transform-origin: left;
+  animation: phrase-progress 3s linear infinite;
+}
+@keyframes phrase-loop {
+  0% {
+    opacity: 0;
+    transform: translate3d(-105%, 0, -90px) rotateY(-13deg);
+  }
+  8%,
+  27% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateY(0);
+  }
+  35%,
+  100% {
+    opacity: 0;
+    transform: translate3d(105%, 0, -90px) rotateY(13deg);
+  }
+}
+@keyframes phrase-loop-reverse {
+  0% {
+    opacity: 0;
+    transform: translate3d(105%, 0, -90px) rotateY(13deg);
+  }
+  8%,
+  27% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateY(0);
+  }
+  35%,
+  100% {
+    opacity: 0;
+    transform: translate3d(-105%, 0, -90px) rotateY(-13deg);
+  }
+}
+@keyframes phrase-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.ember-divider {
+  height: clamp(110px, 15vw, 210px);
+  position: relative;
+  overflow: hidden;
+  background: #080808;
+  margin-top: -1px;
+}
+.ember-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.editorial.collection {
+  padding-top: 22px;
+}
+.editorial.collection .section-heading {
+  margin-bottom: 0;
+  align-items: center;
+}
+.collection .mosaic-runway {
+  height: 300svh;
+  margin-top: 0;
+}
+.collection .experience-grid.mosaic-stage {
+  padding-top: 0;
+}
+@media (max-width: 760px) {
+  .hero-details {
+    gap: 16px;
+  }
+  .hero-details p {
+    font-size: 13px;
+    padding: 14px;
+  }
+  .hero .hero-details .button {
+    min-width: 100px;
+    padding: 12px;
+    gap: 10px;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+  .opening.opening-portal .about {
+    padding: 24px 6%;
+  }
+  .opening.opening-portal .about-grid {
+    grid-template-rows: minmax(0, 48svh) auto;
+    gap: 12px;
+    align-content: center;
+  }
+  .opening.opening-portal .about-copy {
+    align-self: start;
+    padding: 0 0 12px;
+  }
+  .opening.opening-portal .about-copy h2 {
+    margin: 0;
+  }
+  .hero .hero-grid {
+    gap: 28px;
+    padding: 100px 0 70px;
+  }
+  .hero .hero-grid h1 {
+    font-size: clamp(36px, 10.7vw, 80px);
+    letter-spacing: -0.055em;
+  }
+  .opening.opening-portal .about-copy h2 {
+    font-size: clamp(24px, 6.7vw, 44px);
+  }
+  .editorial.collection {
+    padding-top: 18px;
+  }
+  .collection .mosaic-runway {
+    height: 330svh;
+  }
+  .hero header nav a {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (max-height: 500px) and (min-width: 761px) {
+  .hero .hero-grid h1 {
+    font-size: clamp(42px, 10vh, 70px);
+  }
+  .hero .hero-grid {
+    gap: 16px;
+    padding: 88px 0 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .phrase-carousel {
+    height: auto;
+    overflow: visible;
+  }
+  .phrase-carousel .about-line {
+    position: static;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none;
+    will-change: auto;
+  }
+  .phrase-carousel::after {
+    display: none;
+  }
+}
+
+/* Closing sequence: a dark editorial reservation panel followed by contact and testimonials. */
+.portal-ready.portal-motion .booking {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 7%;
+  background: #080808;
+  color: #fff;
+  border: 0;
+  isolation: isolate;
+}
+.portal-ready.portal-motion .booking::before {
+  content: "TORRE DE VEGA";
+  position: absolute;
+  inset: auto -8% 8%;
+  z-index: -1;
+  font:
+    800 clamp(90px, 18vw, 280px)/0.8 Montserrat,
+    sans-serif;
+  letter-spacing: -0.09em;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff14;
+  white-space: nowrap;
+  transform: rotate(-8deg);
+}
+.portal-ready .booking-content {
+  max-width: 980px;
+  text-align: left;
+  left: 7%;
+  right: 7%;
+  top: 29%;
+  transform: translateY(-50%);
+}
+.portal-ready .booking-content h2 {
+  font:
+    800 clamp(42px, 7vw, 108px)/0.94 Montserrat,
+    sans-serif;
+  letter-spacing: -0.065em;
+  margin: 0 0 38px;
+  max-width: 920px;
+}
+.portal-ready .booking-content h2::first-line {
+  color: #fff;
+}
+.portal-ready .booking-content .button {
+  border: 1px solid #ccad6055;
+  background: linear-gradient(130deg, #ccad6015, #ffffff08);
+  color: #fff;
+  backdrop-filter: blur(12px) saturate(135%);
+  -webkit-backdrop-filter: blur(12px) saturate(135%);
+  box-shadow:
+    inset 0 1px 0 #ffffff35,
+    inset 0 -1px 0 #ccad6020,
+    0 12px 28px #0003;
+  border-radius: 5px;
+  padding: 15px 22px;
+  font:
+    700 14px Raleway,
+    sans-serif;
+  min-width: 170px;
+}
+.portal-ready .booking-content .button:hover {
+  background: linear-gradient(130deg, #ccad6028, #ffffff12);
+  color: #fff;
+}
+.portal-ready .booking-content .button {
+  position: absolute;
+  right: -7vw;
+  top: calc(100% + 18px);
+  border-radius: 5px 0 0 5px;
+  min-width: 190px;
+  justify-content: space-between;
+}
+
+/* Reserva: cristal neutro, completamente visible y separado del acento dorado. */
+.portal-ready .booking-content .button {
+  right: clamp(0px, 3vw, 54px);
+  border-color: #ffffff42;
+  background: linear-gradient(130deg, #ffffff1d, #ffffff08);
+  box-shadow:
+    inset 0 1px 0 #ffffff38,
+    inset 0 -1px 0 #ffffff14,
+    0 12px 28px #0003;
+}
+.portal-ready .booking-content .button:hover {
+  background: linear-gradient(130deg, #ffffff2b, #ffffff12);
+}
+.portal-ready .booking-content h2 br {
+  display: block !important;
+}
+
+/* Las reseñas forman una secuencia editorial de ancho completo. */
+.restaurant-contact blockquote {
+  width: 100%;
+}
+.restaurant-contact blockquote:nth-of-type(1) {
+  grid-column: 1/-1;
+  grid-row: 5;
+}
+.restaurant-contact blockquote:nth-of-type(2) {
+  grid-column: 1/-1;
+  grid-row: 6;
+}
+.portal-ready .booking .botanical {
+  display: none;
+}
+.portal-ready .booking footer {
+  display: none;
+}
+
+.restaurant-contact.editorial {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-rows: auto auto 1fr;
+  column-gap: 7%;
+  row-gap: 14px;
+  min-height: 100svh;
+  padding: clamp(60px, 9vw, 130px) 8% 70px;
+  overflow: hidden;
+  background: #080808;
+  color: #fff;
+}
+.restaurant-contact.editorial::before {
+  content: "CONTACTO";
+  position: absolute;
+  right: -4%;
+  top: 6%;
+  font:
+    800 clamp(70px, 13vw, 210px)/0.8 Montserrat,
+    sans-serif;
+  letter-spacing: -0.09em;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff12;
+  pointer-events: none;
+}
+.restaurant-contact.editorial > h2:first-child {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  font:
+    800 clamp(42px, 6vw, 88px)/0.9 Montserrat,
+    sans-serif;
+  letter-spacing: -0.06em;
+  color: #fff;
+}
+.restaurant-contact.editorial > p {
+  grid-column: 1;
+  max-width: 430px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 8px 0 0;
+  position: relative;
+  z-index: 1;
+}
+.restaurant-contact.editorial > p:nth-of-type(1) {
+  grid-row: 2;
+  margin-top: 20px;
+}
+.restaurant-contact.editorial > p:nth-of-type(2) {
+  grid-row: 3;
+  align-self: start;
+  margin-top: 0;
+  font:
+    700 clamp(20px, 2.2vw, 30px) Montserrat,
+    sans-serif;
+  color: #ccad60;
+}
+.restaurant-contact.editorial > p:nth-of-type(3) {
+  grid-column: 1;
+  grid-row: 3;
+  align-self: end;
+  margin: 0;
+  color: #aaa;
+  letter-spacing: 0.08em;
+}
+.restaurant-contact .real-gallery {
+  grid-column: 2;
+  grid-row: 1/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.15fr 0.85fr;
+  gap: 12px;
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  z-index: 1;
+}
+.restaurant-contact .real-gallery img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  filter: saturate(0.82);
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+.restaurant-contact .real-gallery img:first-child {
+  grid-row: 1/3;
+}
+.restaurant-contact .real-gallery img:hover {
+  transform: scale(1.025);
+  filter: saturate(1);
+}
+.restaurant-contact.editorial > h2:nth-of-type(2) {
+  grid-column: 1/-1;
+  grid-row: 4;
+  margin: clamp(70px, 10vw, 150px) 0 8px;
+  padding-top: 22px;
+  border-top: 1px solid #ffffff30;
+  font:
+    800 clamp(36px, 5vw, 72px)/0.95 Montserrat,
+    sans-serif;
+  letter-spacing: -0.06em;
+  color: #fff;
+}
+.restaurant-contact blockquote {
+  grid-row: 5;
+  margin: 0;
+  padding: 28px 30px 30px;
+  border: 1px solid #ffffff2b;
+  border-left: 2px solid #ccad60;
+  background: linear-gradient(135deg, #ffffff0e, #ffffff03);
+  color: #fff;
+  font:
+    400 clamp(16px, 1.4vw, 20px)/1.55 "Open Sans",
+    sans-serif;
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+.restaurant-contact blockquote:nth-of-type(1) {
+  grid-column: 1;
+}
+.restaurant-contact blockquote:nth-of-type(2) {
+  grid-column: 2;
+}
+.restaurant-contact blockquote::first-letter {
+  color: #ccad60;
+  font:
+    700 44px Georgia,
+    serif;
+}
+.restaurant-contact blockquote:hover {
+  transform: translateY(-7px);
+  background: #ccad6010;
+}
+.restaurant-contact blockquote cite {
+  display: block;
+  margin-top: 20px;
+  color: #ccad60;
+  font:
+    700 12px Raleway,
+    sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+@media (max-width: 760px) {
+  .portal-ready.portal-motion .booking {
+    padding: 0 6%;
+  }
+  .portal-ready .booking-content {
+    left: 6%;
+    right: 6%;
+    top: 31%;
+  }
+  .portal-ready .booking-content h2 {
+    font-size: clamp(35px, 10vw, 58px);
+    margin-bottom: 26px;
+  }
+  .portal-ready .booking-content .button {
+    right: 0;
+    top: calc(100% + 12px);
+    min-width: 150px;
+  }
+  .portal-ready .booking footer {
+    left: 6%;
+    right: 6%;
+    bottom: 18px;
+  }
+  .restaurant-contact.editorial {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+    padding: 65px 6% 50px;
+  }
+  .restaurant-contact.editorial::before {
+    top: 3%;
+    right: -8%;
+    font-size: 74px;
+  }
+  .restaurant-contact.editorial > h2:first-child,
+  .restaurant-contact.editorial > p,
+  .restaurant-contact.editorial > p:nth-of-type(1),
+  .restaurant-contact.editorial > p:nth-of-type(2),
+  .restaurant-contact.editorial > p:nth-of-type(3),
+  .restaurant-contact .real-gallery,
+  .restaurant-contact.editorial > h2:nth-of-type(2),
+  .restaurant-contact blockquote {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .restaurant-contact.editorial > p:nth-of-type(1) {
+    margin-top: 12px;
+  }
+  .restaurant-contact.editorial > p:nth-of-type(2) {
+    margin-top: 4px;
+  }
+  .restaurant-contact.editorial > p:nth-of-type(3) {
+    margin: 5px 0 20px;
+  }
+  .restaurant-contact .real-gallery {
+    height: 65svh;
+    grid-template-rows: 1.2fr 0.8fr;
+    margin-top: 12px;
+  }
+  .restaurant-contact.editorial > h2:nth-of-type(2) {
+    margin-top: 70px;
+  }
+  .restaurant-contact blockquote {
+    padding: 22px 20px;
+  }
+}

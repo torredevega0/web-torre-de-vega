@@ -4,24 +4,25 @@
  "grupos": {
   "fotos": { "anchos": [360, 720, 1080] },
   "equipo": { "anchos": [240, 480, 640] },
+  "local": { "anchos": [360, 720, 1000] },
   "carta": { "anchos": [200, 420, 800] }
  },
  "imagenes": [
   { "clave": "fotos/torre-de-vega-44", "origen": "wp-content/uploads/2024/06/torre-de-vega-44.png" },
-  { "clave": "fotos/torre-de-vega-49", "origen": "wp-content/uploads/2024/06/torre-de-vega-49.png" },
-  { "clave": "fotos/torre-de-vega-57", "origen": "wp-content/uploads/2024/06/torre-de-vega-57.png" },
-  { "clave": "fotos/torre-de-vega-58", "origen": "wp-content/uploads/2024/06/torre-de-vega-58.png" },
-  { "clave": "fotos/torre-de-vega-61", "origen": "wp-content/uploads/2024/06/torre-de-vega-61.png" },
-  { "clave": "fotos/torre-de-vega-63", "origen": "wp-content/uploads/2024/06/torre-de-vega-63.png" },
-  { "clave": "fotos/croquetas-caseras", "origen": "wp-content/uploads/2024/06/175.png" },
   { "clave": "fotos/carnes-maduradas", "origen": "wp-content/uploads/2024/06/@Restaurantetorredevega-2024-06-24T122303.180.png" },
   { "clave": "fotos/brindis-vino", "origen": "wp-content/uploads/2024/06/@Restaurantetorredevega-2024-06-24T122327.114.png" },
+  { "clave": "fotos/jamon-iberico", "origen": "_herramientas/originales/fotos/jamon-iberico.jpg" },
+  { "clave": "fotos/langostinos-pil-pil", "origen": "_herramientas/originales/fotos/langostinos-pil-pil.jpg" },
+  { "clave": "fotos/comedor", "origen": "_herramientas/originales/fotos/comedor.jpg" },
+  { "clave": "fotos/vino-mesa", "origen": "_herramientas/originales/fotos/vino-mesa.jpg" },
   { "clave": "fotos/fachada-torre-de-vega", "origen": "wp-content/uploads/2024/06/@Restaurantetorredevega-2024-06-24T121257.132.png" },
 
-  { "clave": "equipo/jose-antonio", "origen": "wp-content/uploads/2024/08/Diseno-sin-titulo-2024-08-27T093622.915.png" },
-  { "clave": "equipo/ana-maria", "origen": "wp-content/uploads/2024/08/Diseno-sin-titulo-2024-08-27T093717.139.png" },
-  { "clave": "equipo/ilona", "origen": "wp-content/uploads/2024/08/Diseno-sin-titulo-2024-08-27T093641.905.png" },
-  { "clave": "equipo/ismael", "origen": "wp-content/uploads/2024/08/Diseno-sin-titulo-2024-08-27T093812.574.png" },
+
+  { "clave": "local/salon", "origen": "_herramientas/originales/local/salon.jpg" },
+  { "clave": "local/barra", "origen": "_herramientas/originales/local/barra.jpg" },
+  { "clave": "local/rincon", "origen": "_herramientas/originales/local/rincon.jpg" },
+  { "clave": "local/detalle", "origen": "_herramientas/originales/local/detalle.jpg" },
+
 
   { "clave": "carta/patatas-bravas", "origen": "_herramientas/originales/carta/bravas-recorte-original-v1.png" },
   { "clave": "carta/langostinos-pil-pil", "origen": "_herramientas/originales/carta/pilpil-recorte-original-v1.png" },
@@ -42,7 +43,6 @@
   { "clave": "carta/solomillo-cerdo", "origen": "_herramientas/originales/carta/M04_solomillo-cerdo.webp" },
   { "clave": "carta/solomillo-ternera", "origen": "_herramientas/originales/carta/M05_solomillo-ternera.webp" },
   { "clave": "carta/carrillada-iberica", "origen": "_herramientas/originales/carta/M06_carrillada-iberica.webp" },
-  { "clave": "carta/tataki-vaca-madurada", "origen": "_herramientas/originales/carta/M10_tataki-vaca-madurada.webp" },
   { "clave": "carta/brocheta-pollo", "origen": "_herramientas/originales/carta/M11_brocheta-pollo.webp" },
   { "clave": "carta/presa-iberica", "origen": "_herramientas/originales/carta/M12_presa-iberica.webp" },
   { "clave": "carta/entrecot-ternera", "origen": "wp-content/uploads/2024/06/@Restaurantetorredevega-2024-06-24T122924.477.png", "recorte_alfa": true },

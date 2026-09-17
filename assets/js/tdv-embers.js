@@ -4,11 +4,16 @@
  * Dibuja la silueta de fuego de assets/data/fire-reference.json deformada por ondas
  * que suben; las raíces quedan unidas a la sección blanca inferior y las puntas se
  * curvan con libertad. Solo anima mientras el lienzo es visible y la pestaña activa.
+ * Si el divisor no tiene color de fondo (páginas interiores, montado sobre la foto del hero),
+ * el lienzo es transparente y las llamas se ven sobre la foto.
  */
 (() => {
   'use strict';
   const canvas = document.querySelector('.ember-canvas');
-  const ctx = canvas?.getContext('2d', { alpha: false });
+  const divider = canvas?.closest('.ember-divider');
+  const background = divider ? getComputedStyle(divider).backgroundColor : '';
+  const transparent = !background || background === 'transparent' || /rgba\(.*,\s*0\)$/.test(background);
+  const ctx = canvas?.getContext('2d', { alpha: transparent });
   if (!ctx) return;
 
   const scriptUrl = document.currentScript?.src || location.href;
@@ -29,8 +34,11 @@
 
   function draw() {
     ctx.setTransform(canvas.width / width, 0, 0, canvas.height / height, 0, 0);
-    ctx.fillStyle = TOP;
-    ctx.fillRect(0, 0, width, height);
+    if (transparent) ctx.clearRect(0, 0, width, height);
+    else {
+      ctx.fillStyle = TOP;
+      ctx.fillRect(0, 0, width, height);
+    }
     ctx.fillStyle = FLAME;
     // Keep the original proportions; overlapping neighbouring roots close seams.
     const scaleY = height / 493;
@@ -73,7 +81,7 @@
         ctx.restore();
       }
     }
-    ctx.fillRect(0, height * 0.875, width, height * 0.125 + 1);
+    ctx.fillRect(0, height * 0.84, width, height * 0.16 + 1);
   }
 
   function animate(now) {

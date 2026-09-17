@@ -1,0 +1,12 @@
+# Lo que está en el repositorio pero NO debe publicarse en la web.
+# (El .gitignore no sirve para esto: estos archivos ya están en Git.)
+
+# Generador de imágenes y fotos originales: solo hacen falta para editar el proyecto.
+_herramientas/
+imagenes-nuevas/
+
+# Documentación interna.
+README-DISENO.md
+
+# Copias de seguridad de páginas: publicadas serían contenido duplicado.
+*.backup-*.html

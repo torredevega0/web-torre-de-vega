@@ -1,0 +1,311 @@
+/*
+ * Torre de Vega — composición de reseñas.
+ *
+ * Dos o tres platos recortados en el centro, con opiniones de clientes flotando a su
+ * alrededor en tarjetas de cristal que se montan sobre los platos (el cristal deja ver el
+ * plato difuminado debajo). En pantallas estrechas, los platos quedan arriba y las
+ * tarjetas se apilan en zigzag, las primeras montadas sobre los platos.
+ * El movimiento al hacer scroll está en assets/js/tdv-motion.js (renderReviewStages).
+ *
+ * Huecos: .review-stage--trio admite 5 tarjetas (slot-1…slot-5) y --duo, 4.
+ * Cargar después de tdv-home.css.
+ */
+
+.review-stage {
+  --card-w: clamp(230px, 21vw, 300px);
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: clamp(600px, 50vw, 760px);
+  margin: 12px 0 0;
+  overflow: hidden;
+}
+@supports (overflow: clip) {
+  /* Clip without creating a scroll container; shadows may spill a little. */
+  .review-stage {
+    overflow: clip;
+    overflow-clip-margin: 24px;
+  }
+}
+
+/* ---- Dishes ---------------------------------------------------------------------------- */
+
+.review-dishes {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: min(60%, 740px);
+  aspect-ratio: 1.15;
+  translate: -50% -50%;
+}
+/* Warm glow of the grill behind the plates. */
+.review-dishes::before {
+  content: '';
+  position: absolute;
+  inset: -18%;
+  z-index: -1;
+  background: radial-gradient(closest-side, rgba(204, 173, 96, 0.28), rgba(204, 173, 96, 0.08) 55%, transparent 76%);
+  pointer-events: none;
+}
+.review-dish {
+  position: absolute;
+  transform: translateY(var(--float, 0px)) rotate(var(--turn, 0deg));
+  will-change: transform;
+}
+.review-dish img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 26px 28px rgba(0, 0, 0, 0.55));
+}
+
+.review-stage--trio .dish-1 {
+  top: 30%;
+  left: -4%;
+  z-index: 1;
+  width: 46%;
+  --turn: -12deg;
+}
+.review-stage--trio .dish-2 {
+  top: 0;
+  left: 20%;
+  z-index: 2;
+  width: 60%;
+}
+.review-stage--trio .dish-3 {
+  top: 36%;
+  right: -6%;
+  z-index: 1;
+  width: 44%;
+  --turn: 10deg;
+}
+.review-stage--duo .dish-1 {
+  top: 4%;
+  left: 2%;
+  z-index: 2;
+  width: 64%;
+}
+.review-stage--duo .dish-2 {
+  top: 40%;
+  right: -2%;
+  z-index: 1;
+  width: 50%;
+  --turn: 9deg;
+}
+
+/* Five opinions around only two dishes (reviews page, first composition). */
+.review-stage--two-dishes .dish-1 {
+  top: 26%;
+  left: -2%;
+  width: 56%;
+  --turn: -10deg;
+}
+.review-stage--two-dishes .dish-2 {
+  top: 2%;
+  left: auto;
+  right: -4%;
+  width: 58%;
+  --turn: 6deg;
+}
+
+/* ---- Opinion cards ------------------------------------------------------------------------ */
+
+.review-stage .review-card {
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  gap: 10px;
+  width: var(--card-w);
+  margin: 0;
+  padding: 16px 18px 18px;
+  border: 1px solid rgba(204, 173, 96, 0.42);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.04));
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 20px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  transform: translate(var(--enter-x, 0px), var(--float, 0px)) rotate(var(--tilt, 0deg));
+  opacity: var(--enter-o, 1);
+  transition: border-color 0.3s ease;
+}
+.review-stage .review-card:hover {
+  border-color: rgba(204, 173, 96, 0.9);
+}
+.review-card figcaption {
+  order: -1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 700 13px/1.2 Raleway, sans-serif;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+/* Undo the large testimonial treatment of tdv-home.css for quotes inside cards. */
+.review-stage .review-card blockquote {
+  grid-row: auto;
+  grid-column: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  transform: none;
+  transition: none;
+}
+.review-stage .review-card blockquote::first-letter {
+  color: inherit;
+  font: inherit;
+}
+.review-stage .review-card blockquote:hover {
+  transform: none;
+  background: none;
+}
+.review-stage .review-card p {
+  margin: 0;
+  font: 400 14.5px/1.55 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+/* Five opinions riding over the edges of three dishes. */
+.review-stage--trio .slot-1 {
+  top: 8%;
+  left: 9%;
+  --tilt: -2deg;
+}
+.review-stage--trio .slot-2 {
+  top: 13%;
+  right: 8%;
+  --tilt: 1.5deg;
+}
+.review-stage--trio .slot-3 {
+  top: 54%;
+  left: 5%;
+  --tilt: 1deg;
+}
+.review-stage--trio .slot-4 {
+  top: 52%;
+  right: 4%;
+  --tilt: -1.5deg;
+}
+.review-stage--trio .slot-5 {
+  bottom: 3%;
+  left: 50%;
+  margin-left: calc(var(--card-w) / -2 + 20px);
+  --tilt: -1deg;
+}
+
+/* Four opinions around two dishes. */
+.review-stage--duo .slot-1 {
+  top: 10%;
+  left: 8%;
+  --tilt: -1.5deg;
+}
+.review-stage--duo .slot-2 {
+  top: 8%;
+  right: 8%;
+  --tilt: 2deg;
+}
+.review-stage--duo .slot-3 {
+  bottom: 10%;
+  left: 12%;
+  --tilt: 1deg;
+}
+.review-stage--duo .slot-4 {
+  right: 10%;
+  bottom: 12%;
+  --tilt: -1.5deg;
+}
+
+/* ---- Placement in the sections ------------------------------------------------------------- */
+
+.restaurant-contact.editorial > .review-stage {
+  grid-row: 6;
+  grid-column: 1 / -1;
+}
+.restaurant-contact.editorial > .review-more {
+  grid-row: 7;
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+.review-more a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(204, 173, 96, 0.55);
+  color: #ccad60;
+  font: 700 13px Raleway, sans-serif;
+  letter-spacing: 0.04em;
+  transition: border-color 0.25s;
+}
+.review-more a:hover {
+  border-color: #ccad60;
+}
+.reviews-wall .review-stage + .review-stage {
+  margin-top: clamp(30px, 6vw, 90px);
+}
+
+/* ---- Narrow screens: dishes on top, cards in a zigzag riding over them --------------------- */
+
+@media (max-width: 900px) {
+  .review-stage {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding-bottom: 6px;
+  }
+  .review-dishes {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: min(100%, 560px);
+    margin: 0 auto -24%;
+    translate: none;
+  }
+  .review-stage--trio .dish-1 {
+    left: -2%;
+  }
+  .review-stage--trio .dish-3 {
+    right: -2%;
+  }
+  .review-stage .review-card {
+    position: relative;
+    inset: auto;
+    width: min(86%, 400px);
+    margin: 0;
+  }
+  /* Each card slightly overlaps the previous one's lower corner: one layered piece. */
+  .review-stage .review-card + .review-card {
+    margin-top: -6px;
+  }
+  .review-stage .review-card:nth-of-type(odd) {
+    align-self: flex-start;
+  }
+  .review-stage .review-card:nth-of-type(even) {
+    align-self: flex-end;
+  }
+  .restaurant-contact.editorial > .review-more {
+    justify-self: start;
+    margin-top: 18px;
+  }
+}
+@media (max-width: 760px) {
+  .restaurant-contact.editorial > .review-stage,
+  .restaurant-contact.editorial > .review-more {
+    grid-row: auto;
+    grid-column: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .review-dish {
+    transform: rotate(var(--turn, 0deg));
+  }
+  .review-stage .review-card {
+    transform: rotate(var(--tilt, 0deg));
+    opacity: 1;
+  }
+}

@@ -101,6 +101,42 @@
 
   renderers.push(renderEditorial);
 
+  /* ---- Review compositions: dishes float, opinions drift in around them ------------- */
+
+  const narrow = matchMedia('(max-width: 900px)');
+  const reviewStages = [...document.querySelectorAll('.review-stage')].map(stage => ({
+    stage,
+    dishes: [...stage.querySelectorAll('.review-dish')],
+    cards: [...stage.querySelectorAll('.review-card')]
+  }));
+
+  function renderReviewStages(h) {
+    for (const { stage, dishes, cards } of reviewStages) {
+      const rect = stage.getBoundingClientRect();
+      if (rect.bottom < -h || rect.top > h * 2) continue;
+      const still = reduced.matches;
+      // 0 while the stage enters from below, 1 when it leaves through the top.
+      const p = clamp((h - rect.top) / (h + rect.height));
+      dishes.forEach((dish, i) => {
+        dish.style.setProperty('--float', still ? '0px' : `${(0.5 - p) * (50 + i * 25)}px`);
+      });
+      cards.forEach((card, i) => {
+        if (still) {
+          ['--enter-x', '--float', '--enter-o'].forEach(name => card.style.removeProperty(name));
+          return;
+        }
+        // Layout offsets, not transformed rects, so the animation never feeds back into itself.
+        const entry = smooth((h * 0.95 - (rect.top + card.offsetTop)) / (h * 0.35));
+        const side = card.offsetLeft + card.offsetWidth / 2 < stage.clientWidth / 2 ? -1 : 1;
+        card.style.setProperty('--enter-x', narrow.matches ? '0px' : `${(1 - entry) * side * 48}px`);
+        card.style.setProperty('--float', `${(1 - entry) * 36 + (0.5 - p) * (i % 2 ? -22 : 22)}px`);
+        card.style.setProperty('--enter-o', String(entry));
+      });
+    }
+  }
+
+  if (reviewStages.length) renderers.push(renderReviewStages);
+
   /* ---- Fade-in blocks outside editorial sections ---------------------------- */
 
   const observer = new IntersectionObserver(

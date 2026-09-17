@@ -9,66 +9,6 @@
   "ratio": 1.0,
   "lqip": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACQBQCdASoYABgAPwFsr1ArJaQiqA1RYCAJYgC06A5VvH2sOB4hbYHWL8jttcvD8/Bk9gc6AADgEc85T3DDZqEd8vfbdHCgC4i6D1X+fxVfvgby0Oa2S5QGOSlAg7EmZkOcJZIAn6unW1nMHVeUqrGg0c+BNkY/I/odIY5g8HY4EAKe+y1hzZ21XzL+9MymmGlHTgzYHDKD6MeNFWr3SLxIP2aINh0A7BalC4AA"
  },
- "fotos/torre-de-vega-49": {
-  "src": "/assets/img/fotos/torre-de-vega-49.fc5a700f",
-  "anchos": [
-   360,
-   720,
-   1080
-  ],
-  "ratio": 1.0,
-  "lqip": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAABwBQCdASoYABgAPwF2s1QrJySjKAgBYCAJbACdM1jpOSOARN0t3s8dlwsr2oNBgGkS9eKAAP5XU+fafAQeX2GRSi7fqSB+pkZX6KqspfXTnbyWZri2kJIU5NDH9OK1vP+LCitk+nGraxuXaFy/AmVaXZKIZx3DWNiYAOvElS9G4gTP4bc2j77zJSEqcaRm+Ty+oahxrAh6MbeWb9mzY7a9LOtrWT1j6xAKxUppMDMeY2IiFBglydFgAAA="
- },
- "fotos/torre-de-vega-57": {
-  "src": "/assets/img/fotos/torre-de-vega-57.9b64537b",
-  "anchos": [
-   360,
-   720,
-   1080
-  ],
-  "ratio": 1.0,
-  "lqip": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABwBQCdASoYABgAPwFurlCrJiQiqA1RYCAJbACdMswBlgIIaAxlBXwLqmIIsUiQ86rKaa8AAP50HqzXtap3j79m3GSqV7tumpeVuBb4vbyJEfgNZm4Ll+cEXwBU0I8a+ZiwzZmsCKfPRjELUrWQS7kj2OkcFtipnERb2uyAlXZJhbrWnhPE4d4s6Ndlv/wTsGig2AAA"
- },
- "fotos/torre-de-vega-58": {
-  "src": "/assets/img/fotos/torre-de-vega-58.c781f1c6",
-  "anchos": [
-   360,
-   720,
-   1080
-  ],
-  "ratio": 1.0,
-  "lqip": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAACQBQCdASoYABgAPwF2slOrJyQiqAgBYCAJbACdM2iBb9AAmXR1SaEcVQDmLLhLOI5u/Eoi4ADhXVhU72uVawZUaLNVPuUq0igs/5RuXEvFuVVaUSHzgzdYi495hhhJfxltn4rLGdA0BG9M9AFM8cYzXB2YwEt35KZbY69DdBuJdjYuofSO6ZVlCRW9Eg4INbJfcU0RkH0FLIPCuFC+4n5ogbft5zMWCfQTAy7+jz+uTuYUoks/szPdxRvefVQRrUZIHzwbSgbntM7EAAA="
- },
- "fotos/torre-de-vega-61": {
-  "src": "/assets/img/fotos/torre-de-vega-61.ef8db827",
-  "anchos": [
-   360,
-   720,
-   1080
-  ],
-  "ratio": 1.0,
-  "lqip": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAACwBQCdASoYABgAPwFws1GrJiSiqAqpYCAJZAC26L/BWpnMfF2IDma3mCFFPGJ8jrzIrkykKzAA/uycNGu/IqMbDZ8cnpDeTnvn/b/U4QcrWkFPpWvy+OYsilptmb/XuqpmadHZWWhEAqVgjbthDkj+9i7xiH4kDzBDQeijwsKKyHg1brnPoBbRkxaKQ2oNscRtNBB7icMhpdIPRyjJkgAA"
- },
- "fotos/torre-de-vega-63": {
-  "src": "/assets/img/fotos/torre-de-vega-63.2d00bb09",
-  "anchos": [
-   360,
-   720,
-   1080
-  ],
-  "ratio": 1.0,
-  "lqip": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAwBQCdASoYABgAPwFwrFErJiQiqA1RYCAJZACsMoNCgB36lA5Loy1UIm5pinQT5oavKAD930OMTCmHQjmMMLbmM+Qh496G4nOtDATai0DqkrCWQllEFSp7q/lThnUEmSdl5XXzD/LWutF7ZFECTa+jpI3j6nYKTnV0y4pz+eXfWfaUjBjYbSWREc7G8kytvWCThCmQzwAAAA=="
- },
- "fotos/croquetas-caseras": {
-  "src": "/assets/img/fotos/croquetas-caseras.0c806f0d",
-  "anchos": [
-   360,
-   720,
-   940
-  ],
-  "ratio": 1.1929,
-  "lqip": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADwBACdASoYABQAPwFyr1KrJqQiqAqpYCAJQBWCP/wCRqMkOiOp0jeh4BcjM1n6JhAA/loLQqcBswk5ECH9YR7IfCWS6A9vBfYOsWRUl+Qrr3hMI+MldWqo1CPRZgLPca/NYwcwd26DEhPiV6JaT1JMYYXdULRr+/rC9hhA6X+eti6GUtdw3uc4AswAAA=="
- },
  "fotos/carnes-maduradas": {
   "src": "/assets/img/fotos/carnes-maduradas.dcf39b4b",
   "anchos": [
@@ -89,6 +29,46 @@
   "ratio": 1.1929,
   "lqip": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAABQBQCdASoYABQAPwF2slOrJyQiqAgBYCAJQBYj0AAkWbM51nO9ladCrxqeMEcacuVyewAA99vc3f7uzgXimJ2iW9TmxZmh+/uYjLujMbdXCmLJskpb9S2jPc0ZftNPJdqKmFGom2j6QckKTShv7FtQl8YIGkOlPMnLhL/b880S8n2Vj3wtlNv47h5ineb/TdBuGlhjU5kYyTgL5+LZjaQZZAA="
  },
+ "fotos/jamon-iberico": {
+  "src": "/assets/img/fotos/jamon-iberico.2a3b2542",
+  "anchos": [
+   360,
+   720,
+   1024
+  ],
+  "ratio": 1.0,
+  "lqip": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4IMoAAAAQBgCdASoYABgAPwFysFIrJqSiqAqpYCAJbACdMyPYAASVY9kN2KjaYDg+XzEZ+23+b76ruTkqUoAA/vKmutl+PjleYEioF9mIU5BDbTW2kaUQvcf8am2ef1tI2G4U52PMVsJyYElFXNX9agfpDtsOJuKUGpCFnbaKecVJ9aJk5CAz5h31/b++G7tgjKIMu+OMwEPcQX44hh8RVGefbg9xfgjbEiTaD8fbk2F7/tt4l96ssKptEPgyMw1ypivAs4Fv3uOyqWQooAAA"
+ },
+ "fotos/langostinos-pil-pil": {
+  "src": "/assets/img/fotos/langostinos-pil-pil.63a0c123",
+  "anchos": [
+   360,
+   720,
+   1080
+  ],
+  "ratio": 1.0,
+  "lqip": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAABwBQCdASoYABgAPwFws1GrJiSiqAqpYCAJbACdAA8O51eKFB99e+nleCo2jKuBCOPkB68AAPxfx6yp/RXJBIfEra7mD2lzo/QG4oJrmRj9gglr7XkW4XetpllqNjkxxs57Sbi2vcGmEvU3/tqW32UaiZMlTisJz+Kbc9jiY7VUKUsyV+N5ePAqJKQeEJWicjAUXk6TGkHvucZNAao+8gfLZUQwm5CsWPqsZryQL6D5tdAUAAA="
+ },
+ "fotos/comedor": {
+  "src": "/assets/img/fotos/comedor.b1c296a0",
+  "anchos": [
+   360,
+   720,
+   1080
+  ],
+  "ratio": 1.3389,
+  "lqip": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAABQBQCdASoYABIAPwF0sFIrJqSiqAqpYCAJYwCsM1XBOYxHsIPZP9vyPUvVQWK7tMgK+gAA/OWnJyEx53s7zNrsKbx2ncoTxfN11UslVAxp11zlToJNEbQqL4goj6GchWObr6+zDlqFmXoKcvhgFB/KHyicfyswGXgR0b9flccHhF9AahaxUoe5d8N7ZRINqUTVNHwoswAAAA=="
+ },
+ "fotos/vino-mesa": {
+  "src": "/assets/img/fotos/vino-mesa.6288f75b",
+  "anchos": [
+   360,
+   720,
+   1080
+  ],
+  "ratio": 1.0,
+  "lqip": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAACQBQCdASoYABgAPwF0sFIrJqSiqAqpYCAJYwCpJswBea9k5S5NxTWhbKI8sM02urgJ5h30iAD+j26+bLIaH8thqIsgg89NuTIIC7okbfMA6im/IGhJD04ynVpqt2Nvw/t/Uxq7FcjtLgWYnb6HWTRGgB9N2s0Am1gAn1WX9TUb4WuufDw6AFFJKoB3T3PpaXrEdIO6u5FbCCxiGded9HmnqYlHzQbct4NAAA=="
+ },
  "fotos/fachada-torre-de-vega": {
   "src": "/assets/img/fotos/fachada-torre-de-vega.a3f07d02",
   "anchos": [
@@ -99,45 +79,45 @@
   "ratio": 1.1929,
   "lqip": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAQBQCdASoYABQAPwF0rlKrJqOiqAqpYCAJQBYj4dAyvCuNCqHb7iMfK6WLv7AZbwAAAP7MEp+3LpW0WetlICAVLwrLwj47e4N8jfwMhhjKNrMrU8Q7g4sUye6+R+3ph8TIUnk5tm2scCWogq+cCA4CfvtKRFuzS2jVo6HIYRLBCuTDVMZz5UE1uC2INmFMosralfDJD0CdyrnHKzWBlbG0OqGXoRpUBAAAAA=="
  },
- "equipo/jose-antonio": {
-  "src": "/assets/img/equipo/jose-antonio.fa09f2ee",
+ "local/salon": {
+  "src": "/assets/img/local/salon.4a4db13f",
   "anchos": [
-   240,
-   480,
-   640
+   360,
+   720,
+   1000
   ],
-  "ratio": 0.6667,
-  "lqip": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAADwBgCdASoYACQAPwF0s1MrJqSipWsxYCAJYgCsM41B+F/HXZ49oXYXhyfaXjchDDk1ldKJo/nBC2p8Oo3TYh4AAN9FsVuy6gDS6R1kr38h13Kbsh1RtiNesGlDEQGbsq/Qal0vpjg1tYV/1gIE6Vgz91FOw0Yz0Rlcn3YmM8zBKNWE+RNrFGX0QI9t9i+UTRZ/ParHRT27N1LDwpq0ALwCmVqTC4uTVQAFQTa9YZJFf129hkUzzE5oRRXCnzOogLDbJW0gAAA="
+  "ratio": 0.76,
+  "lqip": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAABQBQCdASoYACAAPvFiq06ppaQiMAwBMB4JZACdAFY+fcyUPu4sEqIJuG18vhrYTWtnkUAAzZOiW1/iiy0EFlv7Y/3/DHK33HZuETydVyogaK9aRRgym3maiqQC+ZnYaRubwqxZHABoomMWWhNHP51NXmBYUwuFDLqTj1+oO3r8oeueWg1C+Bkm+OF4xleTEU6JoFt2Lj4GKYEuyJMUVR6nzXPM8Jbo5/QUxKTzXOwlrWsUzZ36wi0LCg70w/PJNkqeVwAA"
  },
- "equipo/ana-maria": {
-  "src": "/assets/img/equipo/ana-maria.9a5da112",
+ "local/barra": {
+  "src": "/assets/img/local/barra.4aba8afe",
   "anchos": [
-   240,
-   480,
-   640
+   360,
+   720,
+   1000
   ],
-  "ratio": 0.6667,
-  "lqip": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAACQBgCdASoYACQAPwF0rlKrJqOiqrgKAWAgCUAU6PrAaY6y95g9ndRtiS/Hq5KNCouqWavhxoo1+kEBH3IAAPxbAlg6dH2hmtovJ8gE8lfHHWuQD4kryxpqO7hNQktw8oNwhW5OErA3InAQFrAFrOT6wsv8RQpQ6BDPlgGmiw2lp9OrjbjrW3e/xUlcQAgxhbl+nIva4u9WtMnuknv+TFqNkaQ+s8L1odv8DjrJz8EtoumIOWz+GsMl1SxEwFCSjjTjs2GCA4oJocCNfkzSYgAA"
+  "ratio": 0.76,
+  "lqip": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBQCdASoYACAAPvFkrE6ppaSiMAwBMB4JZACdMoACjctanpIC04Wa7cmtyE5VsaUZoNaAAP6/9P9sW90oXmsZDoCb/HbNJUL2UmkLx/d+o63ang5dSBpY1m/tGSZhUBCPro7zfsc5dQHsTpQxrWVkYHaFoYNr9/PFhOXkR+PwQv15Fi4xIq3OdpiXUAzGZQS0aMyRulESWgE89YHYBhuTDjAAAA=="
  },
- "equipo/ilona": {
-  "src": "/assets/img/equipo/ilona.3ce5b51a",
+ "local/rincon": {
+  "src": "/assets/img/local/rincon.770a34d8",
   "anchos": [
-   240,
-   480,
-   640
+   360,
+   720,
+   1000
   ],
-  "ratio": 0.6667,
-  "lqip": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAAAQBwCdASoYACQAPwFwp06rJqMiMBVdUWAgCWQArDlBU75oAUrvtmIqrXxSvMFN7Lu3/tsCMCHBSOQXQgHrJp8WAAD8oDYoOYRUChO4AMvnxPk7tAkTVux6wO5WQFm7oKC683ddCOvFNvJO6p/IJl4Y4zKRpv6cW6NGKiKx7KSBsB656Sx3BiQz1gAjeQBfDvF1VnHbQMOHecXudI9weIDRf8YN7+Cz0DWTXDtul/xZKXK0HsEkkBuQMrnMUmXEYqvxzb+NkRr8tkpELMhL8k8AAAA="
+  "ratio": 0.8055,
+  "lqip": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAACQBQCdASoYAB4APwFys1GrJqSiqAqpYCAJYgCdMsfHMgnnkcvcuisOEWj7zrmvkGuP4pOhAAD3A5iTUBhkRRfgaEiUAPbD38Xnx+lHFYr6yIpPwovqTFMKfjsEPHNHiPCxAkW17HC9sJ1VnkoSXPwJBfAHlvhkb+cKAUtdpuVsZTznhsZggapv9ZgN/B2dVbMEKClwfrURmjmvzmgAAA=="
  },
- "equipo/ismael": {
-  "src": "/assets/img/equipo/ismael.83572f95",
+ "local/detalle": {
+  "src": "/assets/img/local/detalle.644777ed",
   "anchos": [
-   240,
-   480,
-   640
+   360,
+   720,
+   1000
   ],
-  "ratio": 0.6667,
-  "lqip": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAADwBQCdASoYACQAPwFurVCrJiQisBVaqWAgCWQAtRf/AlwaRoydphjREwqAeODs64Rbi8CALDUQAAD96a2W3IqQdPqqswE6tZ6F+vm/eglWRgfmc5HohoD7a2KgUrFjfdVrLnZ2+Oi8+EgUrIqHWbWzqTazuAblXMdn/nkzssTYEMNOmX8cCUM7j3ddDEC90CePWIG7MPfJ3HByttRN9U61E5hHeSDn1Beop4dz7+H+cCgA"
+  "ratio": 0.8055,
+  "lqip": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAACwBQCdASoYAB4APvVoqU6qpiOiMAwBUB6JZACdISACuKHGPKGp7QbzVkaBijT5hqRKtWk5bAAA/t/CO0YiTV4PMPL+aYYMFZnfYxcwqy9aZXVPo07brtmN5Uhscd3ubu4e+cPipDpk5dMfmDjnF4KuK65JEDAuOq+7wySSmT6B+Amdrzcu7u3N4R5NMVQ0veWDM1h8LMJYAAAA"
  },
  "carta/patatas-bravas": {
   "src": "/assets/img/carta/patatas-bravas.2b215eb6",
@@ -327,16 +307,6 @@
   ],
   "ratio": 1.0,
   "lqip": "data:image/webp;base64,UklGRj4CAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSDMBAAABj8MwkqQoziz4fwmYf6CAMURETtJCqyJdkQgSXyUoAggFF6lfgssiyRFIoCAQ+Tvo5CegoG0bRu3+4U+4JCL6H2ZA+RiQLfTru+WZ+Acs21bbVhckWyU9+c78B/d6sS3bEqTLQ4iICcA9cfCxXVE3dWkQxVN26/NqtQk0/HVbEXnCzWF3Ds4yJI9734z8qNluYmQigkL81gX7wJzahg2eMjQdGGBqIhFel2CJmFxQ1HhH4oyzqLbeFDeq1Kmmfj0aqgNPfVtokfITMxYklD8FLQBldOyXoCRTCrZOS2p6ZVcn08xDGxuu0jGbqQi0puRvsTKnCZU6/uTIKkmSlFfK/JaFAbA5BdcKQIBKyb8ltXhojXdKTNA8TV8lN3hMyhhTyTz+dVqcxat56H//TD93sIx7AFZQOCDkAAAAkAUAnQEqGAAYAD8BcqxRqyajoqgNUWAgCWwAnTKEcDezBClA2S8dQZgrF4EDn+8ViZAi/MAA/SEkPtvSDu2/Pdei91MrZs81kY+9InXpYz6MrRGf60LogEZ3K7XzTF0fhECiwfA/tg+FqsfgPFqFSqFm7OGYjOgyiBTQRiRzA3BVi5x6h6cekyRGFd4iyfTCnOxvZ6mj8VviSpzq53sJRicRXIpsWG/rjKch74pIFdmPDMmRlCfR110eM2EWaIMNX2fEF5e0i9zBjwVs4qKo7+Pn4rnEHYYkq6Jnpv/9hN7ZJgAA"
- },
- "carta/tataki-vaca-madurada": {
-  "src": "/assets/img/carta/tataki-vaca-madurada.43a275db",
-  "anchos": [
-   200,
-   420,
-   800
-  ],
-  "ratio": 0.989,
-  "lqip": "data:image/webp;base64,UklGRjACAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSDMBAAABF+OokSRH2miz5uX3ABx/ljsgIiInX6KEoIy7EGjCEKsKfxm2bD9YQtHha8OJGWUMKGzbtoFsJ93/P9wjIvof9nsvy8D8JeDOCazkYQN2ZNuqon3OfYrL70z+2eHwrhzBHyFExATglULd9HVPQ4pJxfGRq9nffL6dTaehrW9iH7iaL/67hjl008mcy5XfeJhPqo6YiDlU9aKp2AFQWLcVVfgs+bAKAFNoifC1lq5mYm8ax0jpWvOq6hmjqWPtIn7pMXaZfJwj3YIQjSPIoRPHL/Xs+K0jJv+FFdeL2DjzoY9D9nFelGM9DTTGw7QWFXPQCHETNxWBfSdZRN30Jkn0C5e805s6QIGKAvTiCs0IhFey86BEIJjmOJyM8N7L5aIWgHQcDqfi+Gx+HeIpIpZ4c8MrAFZQOCDWAAAAMAYAnQEqGAAYAD8BeLRTqyclIqgIAWAgCWgAnTKEfI3/4BKrwYElEGJrZfXzp+vc5q04jcatIszegAD9IAIey2k5wAlpQQZ1OY4DyB0u14F9Ut7uAX9Rez3xPXP2J4ONbDS39Kh3TH2g3eYsgq/V0aRsPdTQo/VEOdY4d4ziTWKYcLZw/8VKQaQFDulGaMxAaBlbHxODbxzazEYGVOv7xTFsVDW/QK7z5kd8O2lzHWeziHGs4PAjmbj50BOQz9fizOkymuP5/tfsD3uXS/hzEWHzybAwAA=="
  },
  "carta/brocheta-pollo": {
   "src": "/assets/img/carta/brocheta-pollo.aff5893a",

@@ -8,6 +8,11 @@
 
 /* ---- WhatsApp: botón flotante "Haz tu reserva" ------------------------------------- */
 
+/* The plugin's container is 430px wide: never wider than the phone's screen. */
+.qlwapp .qlwapp__container {
+  width: min(430px, 100%);
+}
+
 .qlwapp .qlwapp__container .qlwapp__button.qlwapp__button--button,
 .qlwapp .qlwapp__container .qlwapp__button.qlwapp__button--button:is(:hover, :focus, :active) {
   /* The plugin centres the button with auto margins; keep it compact at the right edge. */

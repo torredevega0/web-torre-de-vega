@@ -1,0 +1,15 @@
+# Fotos originales sin procesar: pesan mucho y la web usa las copias de assets/img
+# (ver "Imágenes adaptativas" en README-DISENO.md).
+imagenes-nuevas/
+
+# Copias de seguridad de páginas: publicadas serían contenido duplicado.
+*.backup-*.html
+*.bak
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Vercel
+.vercel/

@@ -1,106 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://restaurantetorredevega.es/</loc>
+		<loc>https://restaurantetorredevega.com/</loc>
 		<lastmod>2026-09-17T00:00:00+00:00</lastmod>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/fotos/torre-de-vega-44.c190853b-1080.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/fotos/torre-de-vega-44.c190853b-1080.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/fotos/brindis-vino.348759ab-940.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/fotos/brindis-vino.348759ab-940.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/fotos/carnes-maduradas.dcf39b4b-940.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/fotos/carnes-maduradas.dcf39b4b-940.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/fotos/langostinos-pil-pil.63a0c123-1080.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/fotos/langostinos-pil-pil.63a0c123-1080.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/fotos/jamon-iberico.2a3b2542-1024.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/fotos/jamon-iberico.2a3b2542-1024.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/fotos/vino-mesa.6288f75b-1080.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/fotos/vino-mesa.6288f75b-1080.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/local/salon.4a4db13f-1000.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/local/salon.4a4db13f-1000.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/local/barra.4aba8afe-1000.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/local/barra.4aba8afe-1000.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/local/rincon.770a34d8-1000.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/local/rincon.770a34d8-1000.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/local/detalle.644777ed-1000.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/local/detalle.644777ed-1000.webp</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>https://restaurantetorredevega.es/carta-torre-de-vega/</loc>
+		<loc>https://restaurantetorredevega.com/carta-torre-de-vega/</loc>
 		<lastmod>2026-09-17T00:00:00+00:00</lastmod>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/carta/jamon-iberico-bellota.3b109e1e-800.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/carta/jamon-iberico-bellota.3b109e1e-800.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/carta/surtido-croquetas.5a97fcaf-800.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/carta/surtido-croquetas.5a97fcaf-800.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/carta/entrecot-ternera.4b507cf8-800.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/carta/entrecot-ternera.4b507cf8-800.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/carta/pata-pulpo-brasa.3968f746-800.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/carta/pata-pulpo-brasa.3968f746-800.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/carta/tarta-queso.3def8a8e-545.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/carta/tarta-queso.3def8a8e-545.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/carta/tarta-pistacho.5fe435f2-490.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/carta/tarta-pistacho.5fe435f2-490.webp</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>https://restaurantetorredevega.es/torre-de-vega-resenas/</loc>
+		<loc>https://restaurantetorredevega.com/torre-de-vega-resenas/</loc>
 		<lastmod>2026-09-17T00:00:00+00:00</lastmod>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/fotos/comedor.b1c296a0-1080.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/fotos/comedor.b1c296a0-1080.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/carta/estofado-ternera.c5c22392-800.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/carta/estofado-ternera.c5c22392-800.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/carta/jamon-iberico-bellota.3b109e1e-800.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/carta/jamon-iberico-bellota.3b109e1e-800.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/carta/entrecot-ternera.4b507cf8-800.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/carta/entrecot-ternera.4b507cf8-800.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/carta/brownie-chocolate-blanco.15d1a64a-800.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/carta/brownie-chocolate-blanco.15d1a64a-800.webp</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>https://restaurantetorredevega.es/contacto-torre-de-vega/</loc>
+		<loc>https://restaurantetorredevega.com/contacto-torre-de-vega/</loc>
 		<lastmod>2026-09-17T00:00:00+00:00</lastmod>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/fotos/fachada-torre-de-vega.a3f07d02-940.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/fotos/fachada-torre-de-vega.a3f07d02-940.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/carta/carrillada-iberica.45fa9c62-800.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/carta/carrillada-iberica.45fa9c62-800.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/carta/solomillo-ternera.279bc4c4-800.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/carta/solomillo-ternera.279bc4c4-800.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://restaurantetorredevega.es/assets/img/carta/tarta-queso.3def8a8e-545.webp</image:loc>
+			<image:loc>https://restaurantetorredevega.com/assets/img/carta/tarta-queso.3def8a8e-545.webp</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>https://restaurantetorredevega.es/politica-de-cookies/</loc>
+		<loc>https://restaurantetorredevega.com/politica-de-cookies/</loc>
 		<lastmod>2026-09-17T00:00:00+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://restaurantetorredevega.es/politica-de-privacidad/</loc>
+		<loc>https://restaurantetorredevega.com/politica-de-privacidad/</loc>
 		<lastmod>2026-09-17T00:00:00+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://restaurantetorredevega.es/aviso-legal/</loc>
+		<loc>https://restaurantetorredevega.com/aviso-legal/</loc>
 		<lastmod>2026-09-17T00:00:00+00:00</lastmod>
 	</url>
 </urlset>

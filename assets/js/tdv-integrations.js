@@ -12,7 +12,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag() {
   window.dataLayer.push(arguments);
 }
-gtag('set', 'linker', { domains: ['restaurantetorredevega.es'] });
+gtag('set', 'linker', { domains: ['restaurantetorredevega.com'] });
 gtag('js', new Date());
 gtag('set', 'developer_id.dZTNiMT', true);
 gtag('config', 'GT-TWR8KQQL', { googlesitekit_post_type: 'page' });

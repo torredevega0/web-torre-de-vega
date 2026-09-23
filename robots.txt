@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /wp-admin/
 Allow: /wp-admin/admin-ajax.php
 
-Sitemap: https://restaurantetorredevega.es/sitemap_index.xml
+Sitemap: https://restaurantetorredevega.com/sitemap_index.xml

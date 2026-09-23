@@ -10,14 +10,14 @@
 
 ## Pages
 
-- [Inicio](https://restaurantetorredevega.es/): Carnes a la brasa, cortes premium y cocina casera; el local (comedor, barra y terraza en la Plaza Santa Ana) y opiniones de clientes.
-- [Carta](https://restaurantetorredevega.es/carta-torre-de-vega/): Carta completa con precios: entrantes, croquetas caseras, ensaladas, cuchareo, carnes a la brasa, guarniciones, salsas, pescados, menú infantil y postres caseros.
-- [Reseñas](https://restaurantetorredevega.es/torre-de-vega-resenas/): Opiniones de clientes (valoración 4,6/5) sobre las carnes, la cocina casera y el trato.
-- [Contacto y reservas](https://restaurantetorredevega.es/contacto-torre-de-vega/): Dirección, teléfonos y formulario que abre WhatsApp o el correo para consultas y reservas.
-- [Aviso legal](https://restaurantetorredevega.es/aviso-legal/): Datos del titular y condiciones de uso de la web.
-- [Política de privacidad](https://restaurantetorredevega.es/politica-de-privacidad/): Tratamiento de datos personales.
-- [Política de cookies](https://restaurantetorredevega.es/politica-de-cookies/): Cookies que utiliza la web.
+- [Inicio](https://restaurantetorredevega.com/): Carnes a la brasa, cortes premium y cocina casera; el local (comedor, barra y terraza en la Plaza Santa Ana) y opiniones de clientes.
+- [Carta](https://restaurantetorredevega.com/carta-torre-de-vega/): Carta completa con precios: entrantes, croquetas caseras, ensaladas, cuchareo, carnes a la brasa, guarniciones, salsas, pescados, menú infantil y postres caseros.
+- [Reseñas](https://restaurantetorredevega.com/torre-de-vega-resenas/): Opiniones de clientes (valoración 4,6/5) sobre las carnes, la cocina casera y el trato.
+- [Contacto y reservas](https://restaurantetorredevega.com/contacto-torre-de-vega/): Dirección, teléfonos y formulario que abre WhatsApp o el correo para consultas y reservas.
+- [Aviso legal](https://restaurantetorredevega.com/aviso-legal/): Datos del titular y condiciones de uso de la web.
+- [Política de privacidad](https://restaurantetorredevega.com/politica-de-privacidad/): Tratamiento de datos personales.
+- [Política de cookies](https://restaurantetorredevega.com/politica-de-cookies/): Cookies que utiliza la web.
 
 ## Optional
 
-- [Agent (MCP protocol)](websites-agents.hostinger.com/restaurantetorredevega.es/mcp)
+- [Agent (MCP protocol)](websites-agents.hostinger.com/restaurantetorredevega.com/mcp)

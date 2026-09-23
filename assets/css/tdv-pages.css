@@ -373,9 +373,16 @@
 
 /* ---- Legales y autor -------------------------------------------------------------- */
 
+.legal-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
 .legal-page .legal-back {
   display: inline-block;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 .legal-page h2 {
   margin: 2.2em 0 0.8em;

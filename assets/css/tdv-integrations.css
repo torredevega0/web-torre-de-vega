@@ -144,20 +144,38 @@ header #gt_float_wrapper,
   inset: auto !important;
   z-index: auto !important;
 }
+/* .gt_options se abre en flujo normal (position:relative) por defecto, lo que
+   hace crecer la caja del switcher y, al estar centrada verticalmente en la
+   cabecera (align-items:center), se sale tanto por arriba como por abajo —
+   más notorio en la cabecera compacta de la carta (58px). Lo anclamos en
+   position:absolute para que abra hacia abajo sin mover ni recentrar el resto
+   de la cabecera. */
 #gt_float_wrapper .gt_float_switcher {
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 5px;
-  background: transparent;
+  position: relative;
+  overflow: visible;
   color: #fff;
   font: 700 12px/20px Raleway, sans-serif;
 }
 #gt_float_wrapper .gt_float_switcher .gt-selected {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 5px;
   background-color: transparent;
 }
 #gt_float_wrapper .gt_float_switcher .gt-selected .gt-current-lang {
   padding: 6px 12px;
   color: #fff;
+}
+#gt_float_wrapper .gt_float_switcher .gt_options {
+  position: absolute !important;
+  top: calc(100% + 8px);
+  right: 0;
+  left: auto !important;
+  min-width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1000;
 }
 #gt_float_wrapper .gt_float_switcher .gt_options a {
   padding: 9px 14px;

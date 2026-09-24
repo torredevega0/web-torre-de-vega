@@ -152,15 +152,18 @@ header #gt_float_wrapper,
    de la cabecera. */
 #gt_float_wrapper .gt_float_switcher {
   position: relative;
+  display: inline-block;
   overflow: visible;
+  background: transparent;
   color: #fff;
   font: 700 12px/20px Raleway, sans-serif;
 }
 #gt_float_wrapper .gt_float_switcher .gt-selected {
+  display: block;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 5px;
-  background-color: transparent;
+  background-color: rgba(8, 8, 8, 0.82) !important;
 }
 #gt_float_wrapper .gt_float_switcher .gt-selected .gt-current-lang {
   padding: 6px 12px;
